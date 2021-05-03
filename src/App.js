@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import styled from 'styled-components';
+
+
+import { GlobalStyles } from './globalStyles';
+import TaskList from './components/TaskList';
+
+const Container = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:150px;
+`
+const Footer= styled.p`
+  position:fixed;
+  bottom:5px;
+  right:5px;
+`
+
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>    
+     <Container>
+
+       <TaskList/>
+       <GlobalStyles/>
+       <Footer>Created By DK.</Footer>
+     </Container>
+    </>
   );
 }
 
